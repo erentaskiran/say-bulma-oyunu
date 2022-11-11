@@ -1,17 +1,27 @@
-
-
-
 let tahmin;
-let rnd=Math.floor( Math.random()*10);
-
-let hak=0;
-
+let rnd
+let hak;
+let enyuksek=0,endusuk=0;
+let degismeyenhak;
+function maxvalue(){
+    enyuksek=document.getElementById("maxvalue").value;
+}
+function minvalue(){
+    endusuk=document.getElementById("minvalue").value;
+}
 function hakekle(){
     hak=document.getElementById("asd").value;
+    degismeyenhak=hak;
+}
+function random(){
+     rnd=Math.floor( Math.random()*enyuksek);
+    while(rnd<endusuk){
+        rnd=Math.floor( Math.random()*enyuksek);
+    }
 }
 function tahminoyunu(){
     
-    
+    random();
    tahmin=document.getElementById("giris").value; 
    
     hak--;
@@ -29,7 +39,8 @@ function tahminoyunu(){
     else if(tahmin==rnd){
       
         
-        return document.getElementById("sonuc").innerHTML=("Tebrikler doğru bildiniz ");
+        return document.getElementById("sonuc").innerHTML=("Tebrikler doğru bildiniz "),document.getElementById("puanlar").innerHTML=(puanhsp()+" puan aldınız");
+
         
         
     }
@@ -45,9 +56,9 @@ function tahminoyunu(){
 }
 
 
-function puanhsp(hakkı){
-    let asd=hakkı;
-    let hsp=(100-(((useranswer-1)-asd)*(100/useranswer)) );
-    return hsp;
+function puanhsp(){
+   
+   let a= 100-((degismeyenhak-hak-1)*(100/degismeyenhak));
+   return a;
 }
 

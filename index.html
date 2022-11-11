@@ -15,6 +15,14 @@
                 <td>Hak sayısı =</td>
                 <th><input type="number" onchange="hakekle();" name="input" id="asd"></th>
             </tr>
+            <tr>
+                <td>Minimum sayi =</td>
+                <th><input type="number" onchange="minvalue();" name="minvalue" id="minvalue"></th>
+            </tr>
+            <tr>
+                <td>Maksimum sayi =</td>
+                <th><input type="number" onchange="maxvalue();" name="maxvalue" id="maxvalue"></th>
+            </tr>
             
             <tr>
                 <td>Tahmin et = </td>
@@ -24,6 +32,12 @@
             <tr>
                 <th><button onclick="tahminoyunu();"> Tahmin Et</button></th>
                 <th ><div class="sonuc" id="sonuc">  </div></th>
+            </tr>
+            <tr>
+                <th colspan="2"><div id="puanlar"></div> </th>
+            </tr>
+            <tr>
+                <th colspan="2"> <input type="reset" value="Sıfırla"></th>
             </tr>
         </table>
         
