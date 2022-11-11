@@ -13,25 +13,20 @@
         <table>
             <tr>
                 <td>Hak sayısı =</td>
-                <th><input type="number" name="input" id="input"></th>
+                <th><input type="number" onchange="hakekle();" name="input" id="asd"></th>
             </tr>
-            <tr>
-                <td> Sayı 1 ile ne arasında =</td>
-                <th><input type="number" name="maxsayi" id="maxsayi"></th>
-            </tr>
-            <tr>
-                <th colspan="3"><hr></th>
-            </tr>
+            
             <tr>
                 <td>Tahmin et = </td>
                 <th><input type="number" name="giris" id="giris"></th>
-                <th><div class="kucukbuyuk"></div></th>
+                <th><div class="kucukbuyuk" id="asd"></div></th>
             </tr>
             <tr>
-                <th><div class="sonuc" id="sonuc"></div></th>
+                <th><button onclick="tahminoyunu();"> Tahmin Et</button></th>
+                <th ><div class="sonuc" id="sonuc">  </div></th>
             </tr>
         </table>
-        <button onclick="tahminoyunu();"></button>
+        
             
          
         

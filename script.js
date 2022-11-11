@@ -1,44 +1,49 @@
 
-function tahminoyunu(){
-let useranswer=document.getElementById("input").value;
-let hak=useranswer;
-let maxsayi=document.getElementById("maxsayi").value;
+
+
 let tahmin;
-let rnd=0;
+let rnd=Math.floor( Math.random()*10);
 
-rnd=Math.floor( Math.random()*maxsayi);
-
-    tahmin=document.getElementById("giris").value;
-    while(hak>0){
+let hak=0;
+function hakekle(){
+    hak=document.getElementById("asd").value;
+}
+function tahminoyunu(){
     
     
-    
+   tahmin=document.getElementById("giris").value; 
+   
     hak--;
+    if(hak==0){
+        
+        return document.getElementById("sonuc").innerHTML=("Bulamadınız.Sayı "+rnd+" idi");
+        
+    }
     if (tahmin>rnd) {
         
-        return document.getElementById("kucukbuyuk").innerHTML=2;
+        
+        return document.getElementById("sonuc").innerHTML=("düşür");
+        
     }
     else if(tahmin==rnd){
+      
         
-        return document.getElementById("sonuc").innerHTML=("Tebrikler doğru bildiniz "+(useranswer-hak)+" hak kullandınız"+"<br>"+"Puanınız = "+ puanhsp(hak));
+        return document.getElementById("sonuc").innerHTML=("Tebrikler doğru bildiniz ");
         
         
     }
     else if (tahmin<rnd) {
         
-        return document.getElementById("kucukbuyuk").innerHTML=1;
+
+        return document.getElementById("sonuc").innerHTML=("yükselt");       
         
     }
     
-    if(hak==0){
-        
-        return document.getElementById("sonuc").innerHTML="Bulamadınız.Sayı "+rnd+" idi"+"Puanınız = "+0;
-        
-    }
+    
     
 }
 
-}
+
 function puanhsp(hakkı){
     let asd=hakkı;
     let hsp=(100-(((useranswer-1)-asd)*(100/useranswer)) );
