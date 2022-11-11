@@ -5,6 +5,7 @@ let tahmin;
 let rnd=Math.floor( Math.random()*10);
 
 let hak=0;
+
 function hakekle(){
     hak=document.getElementById("asd").value;
 }
