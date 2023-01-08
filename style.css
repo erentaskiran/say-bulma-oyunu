@@ -1,16 +1,13 @@
-*{
+body{
+    background-color: aqua;
     padding: 0;
     margin: 0;
 }
-body{
+button{
+    width: 1700px;
+    height: 1000px;
     background-color: aqua;
-}
-.container{
-    width: fit-content;
-    height: fit-content;
+    position: fixed;
     margin-left: auto;
     margin-right: auto;
-    
-    
-    
 }
