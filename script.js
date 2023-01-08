@@ -23,6 +23,7 @@ function oyun(){
         
         if(tahmin==rndsayi){
         alert("kazandın");
+            break;
 
         }
         else{
